@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d3fc03;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.game3.KeeperController">
+    <center>
+        <ListView fx:id="noteList" prefHeight="200.0" prefWidth="200.0" />
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10px;">
+            <Label style="-fx-font-size: 16pt;" text="Add Note" />
+            <Label fx:id="idstudent" layoutX="264.0" layoutY="20.0" style="-fx-font-size: 16pt;" text="31192" />
+            <TextField fx:id="noteField" prefHeight="26.0" prefWidth="579.0" promptText="Enter note text" />
+            <Button onAction="#addNote" prefHeight="26.0" prefWidth="129.0" style="-fx-border-width: 2; -fx-border-color: #697e01; -fx-background-color: #93b002;" text="Add Note" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Button>
+            <Button onAction="#deleteNote" prefHeight="31.0" prefWidth="130.0" style="-fx-border-width: 2; -fx-border-color: #697e01; -fx-background-color: #93b002;" text="Delete" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Button>
+         <Button fx:id="back" mnemonicParsing="false" prefHeight="26.0" prefWidth="132.0" style="-fx-border-width: 2; -fx-border-color: #697e01; -fx-background-color: #93b002;" text="Back" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Button>
+        </VBox>
+    </bottom>
+   <top>
+        <Label style="-fx-font-size: 24pt; -fx-border-width: 3;" text="My Notes" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
